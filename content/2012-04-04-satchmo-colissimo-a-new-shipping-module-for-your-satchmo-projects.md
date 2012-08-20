@@ -1,6 +1,6 @@
 Date: 2012-04-04
 Title: Satchmo colissimo a new shipping module for your satchmo projects
-category: Web tools
+category: Web
 tags: satchmo, e-commerce, shipping
 
 <img src="http://www.stripes.com/polopoly_fs/1.10216.1329434336!/image/3158504592.jpg_gen/derivatives/landscape_490/3158504592.jpg" alt="Louis Armstrong - Satchmo" />

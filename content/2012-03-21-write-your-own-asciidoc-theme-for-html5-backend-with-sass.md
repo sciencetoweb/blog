@@ -1,6 +1,6 @@
 Date: 2012-03-21
 Title: Write your own AsciiDoc theme for HTML5 backend with SASS
-category: Markup
+category: Tools
 Slug: write-your-own-asciidoc-theme-for-html5-backend-with-sass
 tags: SASS, CSS, AsciiDoc, HTML5
 

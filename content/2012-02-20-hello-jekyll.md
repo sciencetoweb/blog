@@ -1,6 +1,6 @@
 Date: 2012-02-20
 Title: Hello Jekyll
-Category: Web tools
+Category: Web
 Slug: 2012-02-20-hello-jekyll
 Tags: jekyll, me, YetAnotherCoolStuff
 
