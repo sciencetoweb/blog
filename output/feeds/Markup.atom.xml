@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/Markup.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-03-21T00:00:00+01:00</updated><entry><title>Write your own AsciiDoc theme for HTML5 backend with SASS</title><link href="http://www.sciencetoweb.com/write-your-own-asciidoc-theme-for-html5-backend-with-sass.html" rel="alternate"></link><updated>2012-03-21T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-03-21:write-your-own-asciidoc-theme-for-html5-backend-with-sass.html</id><summary type="html">&lt;p&gt;A few months ago, I was searching for a good markup language to write documents for my &lt;a href="http://www.comsource.fr"&gt;company&lt;/a&gt;. Desired features I was looking for were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;text based pivot markup language to ease collaborative work with a &lt;a href="http://en.wikipedia.org/wiki/Source_code_management" title="Source Code Management"&gt;version control system&lt;/a&gt;, such as &lt;a href="http://git-scm.com/"&gt;git&lt;/a&gt; or &lt;a href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;easy convertion to other file formats like HTML, PDF, etc.&lt;/li&gt;
+&lt;li&gt;rich enough to define my own stylesheet/classes for the HTML backend. This is a crucial point.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To my knowledge, &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc&lt;/a&gt; seems to answer to all of these requirements.&lt;/p&gt;
+&lt;h2&gt;AsciiDoc&lt;/h2&gt;
+&lt;p&gt;As defined in the &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc home page&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs. AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, man page.&lt;/p&gt;
+&lt;p&gt;AsciiDoc is highly configurable: both the AsciiDoc source file syntax and the backend output markups (which can be almost any type of SGML/XML markup) can be customized and extended by the user.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In a few words, AsciiDoc is yet another markup language with its own &lt;a href="http://powerman.name/doc/asciidoc"&gt;syntax&lt;/a&gt; and command line tool &lt;code&gt;asciidoc&lt;/code&gt; (written in python!) used to compile your document to a specified backend. For example, &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;asciidoc -b html5 -a icons -a toc2 -a &lt;span class="nv"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;flask &lt;span class="o"&gt;{&lt;/span&gt;yourdocument&lt;span class="o"&gt;}&lt;/span&gt;.adoc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will generate a file &lt;code&gt;{yourdocument}.html&lt;/code&gt; with the flask theme embedded.&lt;/p&gt;
+&lt;h2&gt;CSS to SASS&lt;/h2&gt;
+&lt;p&gt;When dealing with CSS, I have the (good?) habit to avoid doing pure CSS! There are two major languages used to ease the heavy task of writing a stylesheet: &lt;a href="http://sass-lang.com/" title="SASS Lang"&gt;SASS&lt;/a&gt; and &lt;a href="http://lesscss.org/" title="LessCSS"&gt;LESS&lt;/a&gt;. I will not debate here about what is the best framework to use for your own case, you will find plenty of articles about this around the web (see for example the &lt;a href="http://coding.smashingmagazine.com/2011/09/09/an-introduction-to-less-and-comparison-to-sass/"&gt;smashing magazine review&lt;/a&gt;). I have started using SASS even it seems less (!) popular than LESS since &lt;a href="http://twitter.github.com/bootstrap/"&gt;twitter boostrap&lt;/a&gt; use it (personal thought).&lt;/p&gt;
+&lt;h3&gt;SASS: Syntaxically Awesome StyleSheets&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://compass-style.org" title="Compass SASS framework"&gt;Compass&lt;/a&gt; is a CSS authoring framework based on the &lt;a href="http://sass-lang.com/" title="Syntaxically Awesome StyleSheets"&gt;SASS language&lt;/a&gt;. In a few words, Sass is an extension of CSS3 adding some pretty cool and useful features such as nested rules, variables, mixins, etc. The language has two different syntaxes, SCSS (close to CSS) and SASS (indented syntax inspired by &lt;a href="http://haml-lang.com/" title="Haml markup"&gt;Haml&lt;/a&gt;). If you use to practice CSS, I think you would prefer SCSS (as I do!). Your SASS source will be compiled to a clean CSS thanks to the &lt;code&gt;compass&lt;/code&gt; command line tool.&lt;/p&gt;
+&lt;h3&gt;The Compass framework&lt;/h3&gt;
+&lt;p&gt;The Compass framework adds a lot of mixins to deal with CSS3, a grid system (&lt;a href="http://blueprintcss.org/" title="blueprint CSS"&gt;blueprint&lt;/a&gt;), your layout and more. For an up-to-date exhaustive list of implemented mixins, please, check out the &lt;a href="http://compass-style.org/reference/compass/"&gt;compass documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Let's start working&lt;/h3&gt;
+&lt;p&gt;First, you need to install Compass (see &lt;a href="http://compass-style.org/install/"&gt;compass install instructions&lt;/a&gt;), and then create a new compass project with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass create AsciiDoc_SASS --using blueprint
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;--using blueprint&lt;/code&gt; argument is optional; add it if you want to use the blueprint grid framework. Once created, your project will look like:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;AsciiDoc_SASS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+├── &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+├── &lt;span class="n"&gt;images&lt;/span&gt;
+│   └── &lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+├── &lt;span class="n"&gt;sass&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;ie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;partials&lt;/span&gt;
+│   │   └── &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   └── &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+└── &lt;span class="n"&gt;stylesheets&lt;/span&gt;
+    ├── &lt;span class="n"&gt;ie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+    ├── &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+    └── &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since by default, AsciiDoc will only consider one single css file for your theme, you can remove unused print.{scss,css} and ie.{scss,css} files (please, tell me you are not using IE &amp;lt; 9).&lt;/p&gt;
+&lt;p&gt;Now, it's time to find a name for your theme! My theme is hightly inspired by the &lt;code&gt;flask&lt;/code&gt; theme so let it sounds more frenchy, and call it &lt;code&gt;fiole&lt;/code&gt;. You will need to rename your &lt;code&gt;screen.scss&lt;/code&gt; file to &lt;code&gt;{yourtheme}.scss&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default, the html5 backend template file loads two javascript files: &lt;code&gt;asciidoc.js&lt;/code&gt; and &lt;code&gt;{yourtheme}.js&lt;/code&gt;, so create a &lt;code&gt;js&lt;/code&gt; directory and fetch the latest version of &lt;a href="http://asciidoc.googlecode.com/hg/javascripts/asciidoc.js"&gt;asciidoc.js&lt;/a&gt;. Your project tree is now:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;AsciiDoc_SASS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+├── &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+├── &lt;span class="n"&gt;images&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+├── &lt;span class="n"&gt;js&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;asciidoc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+│   └── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+├── &lt;span class="n"&gt;sass&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   └── &lt;span class="n"&gt;partials&lt;/span&gt;
+│       ├── &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+└── &lt;span class="n"&gt;stylesheets&lt;/span&gt;
+    └── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We will now convert asciidoc default CSS to SASS, thanks to &lt;a href="http://css2sass.heroku.com" title="Convert your CSS files to Syntaxically Awesome StyleSheets code!"&gt;css2sass&lt;/a&gt; service (source code of the project is available on &lt;a href="https://github.com/jpablobr/css2sass" title="css2sass project sources"&gt;GitHub&lt;/a&gt;). To do so, fetch the latest release of the asciidoc default stylesheet:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /tmp
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget http://asciidoc.googlecode.com/hg/stylesheets/asciidoc.css
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then copy all the asciidoc.css file content to the [sass2css]((http://css2sass.heroku.com) form and click &lt;strong&gt;"Convert 2 SCSS"&lt;/strong&gt;. Copy The lower textarea SCSS code to a new partial file:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;AsciiDoc_SASS
+&lt;span class="nv"&gt;$ &lt;/span&gt;touch sass/partials/_asciidoc.scss
+&lt;span class="nv"&gt;$ &lt;/span&gt;emacs sass/partials/_asciidoc.scss
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add paste the SCSS code to the &lt;code&gt;_asciidoc.scss&lt;/code&gt; file. You will need to add this style definition to the main document, by adding:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/asciidoc&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at the end of the &lt;code&gt;sass/{yourtheme}.scss&lt;/code&gt; file. Now you are ready to compile stylesheets with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass compile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A more efficient way to work is to use the:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass watch
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;command. In this case, each time you save your scss file, compass automatically compiles your source file to update your css.&lt;/p&gt;
+&lt;h2&gt;Create your own theme&lt;/h2&gt;
+&lt;p&gt;Now you are ready to work on you own theme. Go create a partial called &lt;code&gt;_{yourtheme}.scss&lt;/code&gt; in &lt;code&gt;partials&lt;/code&gt; directory to override &lt;code&gt;_asciidoc.scss&lt;/code&gt; scss rules, and add it to your main theme file: &lt;code&gt;{yourtheme}.scss&lt;/code&gt;. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/asciidoc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/fiole&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/h5bp_print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Procede the same way for printing rules. A good idea is to create a &lt;code&gt;_print.scss&lt;/code&gt; partial with &lt;a href="http://html5boilerplate.com/"&gt;html5 boilerplate&lt;/a&gt; good practices for &lt;code&gt;@media print&lt;/code&gt; rules.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Work Work Work ... coffee ... Work Work Work ... done!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Once your style is ready for production, use the following command to generate a minified version of your CSS file:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass compile -e production --force
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Use your new AsciiDoc theme&lt;/h2&gt;
+&lt;p&gt;Now it's time to test your style on your AsciiDoc file (&lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;lorem_ipsum.adoc&lt;/code&gt;) by typing the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;asciidoc -b html5 -a linkcss &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;stylesdir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;AsciiDoc_SASS/stylesheets &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;scriptsdir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;AsciiDoc_SASS/js &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;themedir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt;/AsciiDoc_SASS/stylesheets &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fiole &lt;span class="se"&gt;\&lt;/span&gt;
+lorem_ipsum.adoc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And tadaaaah!&lt;/p&gt;
+&lt;h2&gt;Resources of the tutorial&lt;/h2&gt;
+&lt;p&gt;You will find all ressources of this tutorial on github: &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jmaupetit/AsciiDoc_SASS"&gt;https://github.com/jmaupetit/AsciiDoc_SASS&lt;/a&gt;&lt;/p&gt;</summary><category term="SASS"></category><category term="CSS"></category><category term="AsciiDoc"></category><category term="HTML5"></category></entry></feed>

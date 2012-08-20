@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/Web%20tools.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-04-04T00:00:00+02:00</updated><entry><title>Satchmo colissimo a new shipping module for your satchmo projects</title><link href="http://www.sciencetoweb.com/satchmo-colissimo-a-new-shipping-module-for-your-satchmo-projects.html" rel="alternate"></link><updated>2012-04-04T00:00:00+02:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-04-04:satchmo-colissimo-a-new-shipping-module-for-your-satchmo-projects.html</id><summary type="html">&lt;p&gt;&lt;img src="http://www.stripes.com/polopoly_fs/1.10216.1329434336!/image/3158504592.jpg_gen/derivatives/landscape_490/3158504592.jpg" alt="Louis Armstrong - Satchmo" /&gt;&lt;/p&gt;
+&lt;p&gt;I just released the first version of a new shipping module for &lt;a href="http://www.satchmoproject.com/"&gt;satchmo&lt;/a&gt; &lt;a href="https://www.djangoproject.com/"&gt;django&lt;/a&gt; e-commerce solution: &lt;a href="https://github.com/jmaupetit/satchmo-colissimo"&gt;&lt;strong&gt;satchmo-colissimo&lt;/strong&gt;&lt;/a&gt;. The module basic documentation follows. You can find the sources on github: &lt;a href="https://github.com/jmaupetit/satchmo-colissimo" title="Django Satchmo Colissimo"&gt;https://github.com/jmaupetit/satchmo-colissimo&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Dependancies&lt;/h2&gt;
+&lt;p&gt;Considering you have a properly configured (and working) satchmo project. The only required dependancy is the &lt;a href="https://github.com/matm/django-colissimo"&gt;django-colissimo&lt;/a&gt; module up-to-date with LaPoste Colissimo shipping rates. For more informations on how to update django-colissimo to &lt;code&gt;youryear&lt;/code&gt; rates, please refer to the project page.&lt;/p&gt;
+&lt;p&gt;Most of the time, a simple:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install django-colissimo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will do the trick. If pip does not found the module on PyPI, use the
+github repository&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install git+git://github.com/matm/django-colissimo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h3&gt;Configure django-colissimo&lt;/h3&gt;
+&lt;p&gt;Once dependancies installed, edit your satchmo project &lt;code&gt;settings.py&lt;/code&gt; and add &lt;code&gt;colissimo&lt;/code&gt; to your &lt;code&gt;INSTALLED_APPS&lt;/code&gt;, &lt;em&gt;e.g.&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;colissimo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you need to create &lt;code&gt;colissimo&lt;/code&gt; database scheme with&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python manage.py syncdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will also load colissimo rates in the db. If not, fetch initial data:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;mkdir data
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget https://raw.github.com/matm/django-colissimo/master/colissimo/fixtures/initial_data.json &lt;span class="se"&gt;\&lt;/span&gt;
+  -O data/colissimo_initial_data.json
+python manage.py loaddata data/colissimo_initial_data.json
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you need to install satchmo-colissimo from github, either by cloning the project of using pip.&lt;/p&gt;
+&lt;h3&gt;Clone the module from github&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git clone git://github.com/jmaupetit/satchmo-colissimo
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;satchmo-colissimo
+&lt;span class="nv"&gt;$ &lt;/span&gt;python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Use pip&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install git+git://github.com/jmaupetit/satchmo-colissimo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Activate satchmo-colissimo&lt;/h3&gt;
+&lt;p&gt;To activate your custom shipping module, add &lt;code&gt;satchmo_colissimo&lt;/code&gt; to your &lt;code&gt;CUSTOM_SHIPPING_MODULES&lt;/code&gt; list, &lt;em&gt;e.g.&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;SATCHMO_SETTINGS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="o"&gt;....&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;CUSTOM_SHIPPING_MODULES&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;satchmo_colissimo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now go to your site settings (once logged in the django admin): in development mode it would be something like &lt;code&gt;http://127.0.0.1:8000/settings/&lt;/code&gt;. Click on &lt;code&gt;Shipping settings&lt;/code&gt; and select &lt;code&gt;Colissimo&lt;/code&gt; as an activated shipping module. Then, &lt;code&gt;update settings&lt;/code&gt; and a new configuration section will appear for &lt;a href="https://github.com/jmaupetit/satchmo-colissimo"&gt;Colissimo shipping module&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release based on the django-colissimo module&lt;/li&gt;
+&lt;li&gt;Applies colissimo rates given a package weight, destination and recommanded level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Roadmap&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete support of &lt;a href="http://www.colissimo.fr/so/"&gt;So Colissimo&lt;/a&gt; WS (multiple delivery modes, tracking number, shipping label, etc.)&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="satchmo"></category><category term="e-commerce"></category><category term="shipping"></category></entry><entry><title>Hello Jekyll</title><link href="http://www.sciencetoweb.com/2012-02-20-hello-jekyll.html" rel="alternate"></link><updated>2012-02-20T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-02-20:2012-02-20-hello-jekyll.html</id><summary type="html">&lt;p&gt;After searching for months an easy to use blogging system for my everyday use, I finally found &lt;a href="http://jekyllbootstrap.com/" title="Jekyll boostrap project page"&gt;Jekyll&lt;/a&gt;, thanks to my &lt;a href="https://twitter.com/#!/julienmaupetit" title="Twitter Julien Maupetit"&gt;twitter&lt;/a&gt; feeds.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://mskstatic.com/386/515/medias/photos/programmes/moins_de150000/132996/dr-jekyll-and-mr-hyde.jpg" alt="Jekyll and Hide" /&gt;&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;p&gt;With Jekyll, create a new blog post or a new page for your blog is as easy as typing a single command line like &lt;code&gt;rake do something&lt;/code&gt;. You only need to focus on the content written in &lt;a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax"&gt;markdown&lt;/a&gt;. Main advantages of this tool are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You only need your favourite &lt;strong&gt;text editor&lt;/strong&gt; (&lt;a href="http://www.gnu.org/software/emacs/" title="GNU Emacs Project page"&gt;GNU Emacs&lt;/a&gt; of course!) and a terminal (with &lt;a href="http://git-scm.com/" title="git SCM"&gt;git&lt;/a&gt; installed) to publish new content on your blog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;No database&lt;/strong&gt; is requiered&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Github &lt;strong&gt;free hosting&lt;/strong&gt; (uses &lt;a href="http://pages.github.com/" title="GitHub Pages"&gt;GitHub Pages&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;GitHub Pages allows you to use &lt;strong&gt;your own domaine name&lt;/strong&gt; (define a CNAME) pointing to your repository (your blog in fact)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Optionally you can locally install jekyll to preview your content&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Overview of Jekyll&lt;/h2&gt;
+&lt;h3&gt;Create a blog post&lt;/h3&gt;
+&lt;p&gt;Once installed and configured (5 minutes with the &lt;a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html"&gt;Jekyll quick start&lt;/a&gt; guide), simply create a blog post with the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake post &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a properly formated file &lt;code&gt;./_posts/2012-03-15-my-new-post.md&lt;/code&gt;. This is the one you must edit with your post content.&lt;/p&gt;
+&lt;h3&gt;Create pages&lt;/h3&gt;
+&lt;p&gt;You may also want to generate static pages for your blog. Let's say you want to create a static page with relevant informations about you, type:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake page &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;about.md&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create your page template &lt;code&gt;about.md&lt;/code&gt; in your project root directory. This page will be automatically listerd in the &lt;code&gt;/pages.html&lt;/code&gt; view and available at &lt;code&gt;/about.html&lt;/code&gt;. The Jekyll documentation mention the possibility to create nested pages via the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake page &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pages/about.md&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Publish&lt;/h3&gt;
+&lt;p&gt;Once configured, publishing new content to your blog is a classical git workflow:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -am &lt;span class="s1"&gt;&amp;#39;New blog post added&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now wait for a few minutes, GitHub will send you a notification once our page has been build successfully.&lt;/p&gt;
+&lt;h3&gt;Syntax highlighting&lt;/h3&gt;
+&lt;p&gt;One of the major feature I liked is the opportunity to add syntax highlighting for code blocks: Jekyll uses &lt;a href="http://www.liquidmarkup.org"&gt;Liquid&lt;/a&gt; to process templates and adds &lt;a href="https://github.com/mojombo/jekyll/wiki/liquid-extensions" title="See Jekyll Liquid extensions"&gt;its own tags&lt;/a&gt; including &lt;code&gt;highlight&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;highlight&lt;/code&gt; liquid tag, the following block code:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;{% literal %}
+{% highlight python linenos %}
+print &amp;quot;Hello Jekyll!&amp;quot;
+{% endhighlight %}
+{% endliteral %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will be rendered as:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;{% highlight python linenos %}
+print &amp;quot;Hello Jekyll!&amp;quot;
+{% endhighlight %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Note to myself: to display the non-rendered block you should use the &lt;code&gt;literal&lt;/code&gt; tag for liquid 2.2.2 and the &lt;code&gt;raw&lt;/code&gt; tag for liquid 2.3.0, and both of them are not backward compatible... Hence, when &lt;code&gt;gh-pages&lt;/code&gt; will upgrade to liquid 2.3.0, this page will be broken and will need an update. Please, dear reader: do not hesitate to warn me! This has been reported in &lt;a href="https://github.com/mojombo/jekyll/issues/425"&gt;issue #425&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Configure your domain name&lt;/h3&gt;
+&lt;p&gt;As explained in &lt;a href="http://pages.github.com/#custom_domains" title="Read GitHub Pages Documentation"&gt;GitHub Pages documentation&lt;/a&gt;, GitHub offers you the possibility to use your own CNAME pointing to your repository/blog. Hence, at the root of your repository add a file named &lt;code&gt;CNAME&lt;/code&gt; which contains your subdomain name, &lt;em&gt;e.g.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;yageekblog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And of course, configure your DNS settings properly, &lt;em&gt;e.g.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;yageekblog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;CNAME&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt; &lt;span class="n"&gt;jmaupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Still some work to do...&lt;/h2&gt;
+&lt;p&gt;Now that I have found the technical solution I was looking for, I have to do some more work to migrate posts from my previous blog ( &lt;a href="http://www.maupetit.net/Blog/" title="Julien Maupetit Deprecated Blog"&gt;http://www.maupetit.net/Blog/&lt;/a&gt; ) and define my own template and not &lt;a href="http://themes.jekyllbootstrap.com/" title="Theme for Jekyll-bootstrap"&gt;the-minimum theme&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2012/04/05&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Latest remarks&lt;/h2&gt;
+&lt;h3&gt;Debugging your pages/posts&lt;/h3&gt;
+&lt;p&gt;In &lt;code&gt;page build failure&lt;/code&gt; case (when pushing to github), install gem versions used in production by github, &lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;liquid 2.2.2&lt;/code&gt; and &lt;code&gt;jekyll 0.11.0&lt;/code&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install liquid -v 2.2.2
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install jekyll -v 0.11.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To see building errors, inactivate the &lt;code&gt;auto&lt;/code&gt; mode, by editing your &lt;code&gt;_config.yml&lt;/code&gt; as:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Always run the jekyll server with the &lt;code&gt;--safe&lt;/code&gt; option&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;jekyll --server --safe
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="jekyll"></category><category term="me"></category><category term="YetAnotherCoolStuff"></category></entry></feed>

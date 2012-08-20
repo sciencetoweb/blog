@@ -1,14 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-08-18T00:00:00+02:00</updated><entry><title>My super title</title><link href="http://www.sciencetoweb.com/my-super-post.html" rel="alternate"></link><updated>2012-08-18T00:00:00+02:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-08-18:my-super-post.html</id><summary type="html">&lt;h1&gt;This is my very first test&lt;/h1&gt;
-&lt;p&gt;Le passage de Lorem Ipsum standard, utilisé depuis 1500&lt;/p&gt;
-&lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-Section 1.10.32 du "De Finibus Bonorum et Malorum" de Ciceron (45 av. J.-C.)&lt;/p&gt;
-&lt;p&gt;"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-Traduction de H. Rackham (1914)&lt;/p&gt;
-&lt;p&gt;"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;example&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Some doc&lt;/span&gt;
-&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-04-04T00:00:00+02:00</updated><entry><title>Satchmo colissimo a new shipping module for your satchmo projects</title><link href="http://www.sciencetoweb.com/satchmo-colissimo-a-new-shipping-module-for-your-satchmo-projects.html" rel="alternate"></link><updated>2012-04-04T00:00:00+02:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-04-04:satchmo-colissimo-a-new-shipping-module-for-your-satchmo-projects.html</id><summary type="html">&lt;p&gt;&lt;img src="http://www.stripes.com/polopoly_fs/1.10216.1329434336!/image/3158504592.jpg_gen/derivatives/landscape_490/3158504592.jpg" alt="Louis Armstrong - Satchmo" /&gt;&lt;/p&gt;
+&lt;p&gt;I just released the first version of a new shipping module for &lt;a href="http://www.satchmoproject.com/"&gt;satchmo&lt;/a&gt; &lt;a href="https://www.djangoproject.com/"&gt;django&lt;/a&gt; e-commerce solution: &lt;a href="https://github.com/jmaupetit/satchmo-colissimo"&gt;&lt;strong&gt;satchmo-colissimo&lt;/strong&gt;&lt;/a&gt;. The module basic documentation follows. You can find the sources on github: &lt;a href="https://github.com/jmaupetit/satchmo-colissimo" title="Django Satchmo Colissimo"&gt;https://github.com/jmaupetit/satchmo-colissimo&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Dependancies&lt;/h2&gt;
+&lt;p&gt;Considering you have a properly configured (and working) satchmo project. The only required dependancy is the &lt;a href="https://github.com/matm/django-colissimo"&gt;django-colissimo&lt;/a&gt; module up-to-date with LaPoste Colissimo shipping rates. For more informations on how to update django-colissimo to &lt;code&gt;youryear&lt;/code&gt; rates, please refer to the project page.&lt;/p&gt;
+&lt;p&gt;Most of the time, a simple:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install django-colissimo
+&lt;/pre&gt;&lt;/div&gt;
 
-    &lt;span class="n"&gt;spam&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hello_world&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="test"></category><category term="hello world"></category></entry></feed>
+
+&lt;p&gt;will do the trick. If pip does not found the module on PyPI, use the
+github repository&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install git+git://github.com/matm/django-colissimo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h3&gt;Configure django-colissimo&lt;/h3&gt;
+&lt;p&gt;Once dependancies installed, edit your satchmo project &lt;code&gt;settings.py&lt;/code&gt; and add &lt;code&gt;colissimo&lt;/code&gt; to your &lt;code&gt;INSTALLED_APPS&lt;/code&gt;, &lt;em&gt;e.g.&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;colissimo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you need to create &lt;code&gt;colissimo&lt;/code&gt; database scheme with&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python manage.py syncdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will also load colissimo rates in the db. If not, fetch initial data:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;mkdir data
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget https://raw.github.com/matm/django-colissimo/master/colissimo/fixtures/initial_data.json &lt;span class="se"&gt;\&lt;/span&gt;
+  -O data/colissimo_initial_data.json
+python manage.py loaddata data/colissimo_initial_data.json
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you need to install satchmo-colissimo from github, either by cloning the project of using pip.&lt;/p&gt;
+&lt;h3&gt;Clone the module from github&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git clone git://github.com/jmaupetit/satchmo-colissimo
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;satchmo-colissimo
+&lt;span class="nv"&gt;$ &lt;/span&gt;python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Use pip&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install git+git://github.com/jmaupetit/satchmo-colissimo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Activate satchmo-colissimo&lt;/h3&gt;
+&lt;p&gt;To activate your custom shipping module, add &lt;code&gt;satchmo_colissimo&lt;/code&gt; to your &lt;code&gt;CUSTOM_SHIPPING_MODULES&lt;/code&gt; list, &lt;em&gt;e.g.&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;SATCHMO_SETTINGS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="o"&gt;....&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;CUSTOM_SHIPPING_MODULES&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;satchmo_colissimo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now go to your site settings (once logged in the django admin): in development mode it would be something like &lt;code&gt;http://127.0.0.1:8000/settings/&lt;/code&gt;. Click on &lt;code&gt;Shipping settings&lt;/code&gt; and select &lt;code&gt;Colissimo&lt;/code&gt; as an activated shipping module. Then, &lt;code&gt;update settings&lt;/code&gt; and a new configuration section will appear for &lt;a href="https://github.com/jmaupetit/satchmo-colissimo"&gt;Colissimo shipping module&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Changelog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release based on the django-colissimo module&lt;/li&gt;
+&lt;li&gt;Applies colissimo rates given a package weight, destination and recommanded level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Roadmap&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete support of &lt;a href="http://www.colissimo.fr/so/"&gt;So Colissimo&lt;/a&gt; WS (multiple delivery modes, tracking number, shipping label, etc.)&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="satchmo"></category><category term="e-commerce"></category><category term="shipping"></category></entry><entry><title>Write your own AsciiDoc theme for HTML5 backend with SASS</title><link href="http://www.sciencetoweb.com/write-your-own-asciidoc-theme-for-html5-backend-with-sass.html" rel="alternate"></link><updated>2012-03-21T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-03-21:write-your-own-asciidoc-theme-for-html5-backend-with-sass.html</id><summary type="html">&lt;p&gt;A few months ago, I was searching for a good markup language to write documents for my &lt;a href="http://www.comsource.fr"&gt;company&lt;/a&gt;. Desired features I was looking for were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;text based pivot markup language to ease collaborative work with a &lt;a href="http://en.wikipedia.org/wiki/Source_code_management" title="Source Code Management"&gt;version control system&lt;/a&gt;, such as &lt;a href="http://git-scm.com/"&gt;git&lt;/a&gt; or &lt;a href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;easy convertion to other file formats like HTML, PDF, etc.&lt;/li&gt;
+&lt;li&gt;rich enough to define my own stylesheet/classes for the HTML backend. This is a crucial point.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To my knowledge, &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc&lt;/a&gt; seems to answer to all of these requirements.&lt;/p&gt;
+&lt;h2&gt;AsciiDoc&lt;/h2&gt;
+&lt;p&gt;As defined in the &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc home page&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs. AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, man page.&lt;/p&gt;
+&lt;p&gt;AsciiDoc is highly configurable: both the AsciiDoc source file syntax and the backend output markups (which can be almost any type of SGML/XML markup) can be customized and extended by the user.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In a few words, AsciiDoc is yet another markup language with its own &lt;a href="http://powerman.name/doc/asciidoc"&gt;syntax&lt;/a&gt; and command line tool &lt;code&gt;asciidoc&lt;/code&gt; (written in python!) used to compile your document to a specified backend. For example, &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;asciidoc -b html5 -a icons -a toc2 -a &lt;span class="nv"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;flask &lt;span class="o"&gt;{&lt;/span&gt;yourdocument&lt;span class="o"&gt;}&lt;/span&gt;.adoc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will generate a file &lt;code&gt;{yourdocument}.html&lt;/code&gt; with the flask theme embedded.&lt;/p&gt;
+&lt;h2&gt;CSS to SASS&lt;/h2&gt;
+&lt;p&gt;When dealing with CSS, I have the (good?) habit to avoid doing pure CSS! There are two major languages used to ease the heavy task of writing a stylesheet: &lt;a href="http://sass-lang.com/" title="SASS Lang"&gt;SASS&lt;/a&gt; and &lt;a href="http://lesscss.org/" title="LessCSS"&gt;LESS&lt;/a&gt;. I will not debate here about what is the best framework to use for your own case, you will find plenty of articles about this around the web (see for example the &lt;a href="http://coding.smashingmagazine.com/2011/09/09/an-introduction-to-less-and-comparison-to-sass/"&gt;smashing magazine review&lt;/a&gt;). I have started using SASS even it seems less (!) popular than LESS since &lt;a href="http://twitter.github.com/bootstrap/"&gt;twitter boostrap&lt;/a&gt; use it (personal thought).&lt;/p&gt;
+&lt;h3&gt;SASS: Syntaxically Awesome StyleSheets&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://compass-style.org" title="Compass SASS framework"&gt;Compass&lt;/a&gt; is a CSS authoring framework based on the &lt;a href="http://sass-lang.com/" title="Syntaxically Awesome StyleSheets"&gt;SASS language&lt;/a&gt;. In a few words, Sass is an extension of CSS3 adding some pretty cool and useful features such as nested rules, variables, mixins, etc. The language has two different syntaxes, SCSS (close to CSS) and SASS (indented syntax inspired by &lt;a href="http://haml-lang.com/" title="Haml markup"&gt;Haml&lt;/a&gt;). If you use to practice CSS, I think you would prefer SCSS (as I do!). Your SASS source will be compiled to a clean CSS thanks to the &lt;code&gt;compass&lt;/code&gt; command line tool.&lt;/p&gt;
+&lt;h3&gt;The Compass framework&lt;/h3&gt;
+&lt;p&gt;The Compass framework adds a lot of mixins to deal with CSS3, a grid system (&lt;a href="http://blueprintcss.org/" title="blueprint CSS"&gt;blueprint&lt;/a&gt;), your layout and more. For an up-to-date exhaustive list of implemented mixins, please, check out the &lt;a href="http://compass-style.org/reference/compass/"&gt;compass documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Let's start working&lt;/h3&gt;
+&lt;p&gt;First, you need to install Compass (see &lt;a href="http://compass-style.org/install/"&gt;compass install instructions&lt;/a&gt;), and then create a new compass project with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass create AsciiDoc_SASS --using blueprint
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;--using blueprint&lt;/code&gt; argument is optional; add it if you want to use the blueprint grid framework. Once created, your project will look like:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;AsciiDoc_SASS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+├── &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+├── &lt;span class="n"&gt;images&lt;/span&gt;
+│   └── &lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+├── &lt;span class="n"&gt;sass&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;ie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;partials&lt;/span&gt;
+│   │   └── &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   └── &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+└── &lt;span class="n"&gt;stylesheets&lt;/span&gt;
+    ├── &lt;span class="n"&gt;ie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+    ├── &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+    └── &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since by default, AsciiDoc will only consider one single css file for your theme, you can remove unused print.{scss,css} and ie.{scss,css} files (please, tell me you are not using IE &amp;lt; 9).&lt;/p&gt;
+&lt;p&gt;Now, it's time to find a name for your theme! My theme is hightly inspired by the &lt;code&gt;flask&lt;/code&gt; theme so let it sounds more frenchy, and call it &lt;code&gt;fiole&lt;/code&gt;. You will need to rename your &lt;code&gt;screen.scss&lt;/code&gt; file to &lt;code&gt;{yourtheme}.scss&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default, the html5 backend template file loads two javascript files: &lt;code&gt;asciidoc.js&lt;/code&gt; and &lt;code&gt;{yourtheme}.js&lt;/code&gt;, so create a &lt;code&gt;js&lt;/code&gt; directory and fetch the latest version of &lt;a href="http://asciidoc.googlecode.com/hg/javascripts/asciidoc.js"&gt;asciidoc.js&lt;/a&gt;. Your project tree is now:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;AsciiDoc_SASS&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+├── &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+├── &lt;span class="n"&gt;images&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;grid&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+├── &lt;span class="n"&gt;js&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;asciidoc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+│   └── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+├── &lt;span class="n"&gt;sass&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+│   └── &lt;span class="n"&gt;partials&lt;/span&gt;
+│       ├── &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scss&lt;/span&gt;
+└── &lt;span class="n"&gt;stylesheets&lt;/span&gt;
+    └── &lt;span class="n"&gt;fiole&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We will now convert asciidoc default CSS to SASS, thanks to &lt;a href="http://css2sass.heroku.com" title="Convert your CSS files to Syntaxically Awesome StyleSheets code!"&gt;css2sass&lt;/a&gt; service (source code of the project is available on &lt;a href="https://github.com/jpablobr/css2sass" title="css2sass project sources"&gt;GitHub&lt;/a&gt;). To do so, fetch the latest release of the asciidoc default stylesheet:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /tmp
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget http://asciidoc.googlecode.com/hg/stylesheets/asciidoc.css
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then copy all the asciidoc.css file content to the [sass2css]((http://css2sass.heroku.com) form and click &lt;strong&gt;"Convert 2 SCSS"&lt;/strong&gt;. Copy The lower textarea SCSS code to a new partial file:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;AsciiDoc_SASS
+&lt;span class="nv"&gt;$ &lt;/span&gt;touch sass/partials/_asciidoc.scss
+&lt;span class="nv"&gt;$ &lt;/span&gt;emacs sass/partials/_asciidoc.scss
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add paste the SCSS code to the &lt;code&gt;_asciidoc.scss&lt;/code&gt; file. You will need to add this style definition to the main document, by adding:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/asciidoc&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at the end of the &lt;code&gt;sass/{yourtheme}.scss&lt;/code&gt; file. Now you are ready to compile stylesheets with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass compile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A more efficient way to work is to use the:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass watch
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;command. In this case, each time you save your scss file, compass automatically compiles your source file to update your css.&lt;/p&gt;
+&lt;h2&gt;Create your own theme&lt;/h2&gt;
+&lt;p&gt;Now you are ready to work on you own theme. Go create a partial called &lt;code&gt;_{yourtheme}.scss&lt;/code&gt; in &lt;code&gt;partials&lt;/code&gt; directory to override &lt;code&gt;_asciidoc.scss&lt;/code&gt; scss rules, and add it to your main theme file: &lt;code&gt;{yourtheme}.scss&lt;/code&gt;. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/asciidoc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/fiole&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;partials/h5bp_print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Procede the same way for printing rules. A good idea is to create a &lt;code&gt;_print.scss&lt;/code&gt; partial with &lt;a href="http://html5boilerplate.com/"&gt;html5 boilerplate&lt;/a&gt; good practices for &lt;code&gt;@media print&lt;/code&gt; rules.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Work Work Work ... coffee ... Work Work Work ... done!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Once your style is ready for production, use the following command to generate a minified version of your CSS file:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;compass compile -e production --force
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Use your new AsciiDoc theme&lt;/h2&gt;
+&lt;p&gt;Now it's time to test your style on your AsciiDoc file (&lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;lorem_ipsum.adoc&lt;/code&gt;) by typing the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;asciidoc -b html5 -a linkcss &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;stylesdir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;AsciiDoc_SASS/stylesheets &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;scriptsdir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;AsciiDoc_SASS/js &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;themedir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt;/AsciiDoc_SASS/stylesheets &lt;span class="se"&gt;\&lt;/span&gt;
+-a &lt;span class="nv"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fiole &lt;span class="se"&gt;\&lt;/span&gt;
+lorem_ipsum.adoc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And tadaaaah!&lt;/p&gt;
+&lt;h2&gt;Resources of the tutorial&lt;/h2&gt;
+&lt;p&gt;You will find all ressources of this tutorial on github: &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jmaupetit/AsciiDoc_SASS"&gt;https://github.com/jmaupetit/AsciiDoc_SASS&lt;/a&gt;&lt;/p&gt;</summary><category term="SASS"></category><category term="CSS"></category><category term="AsciiDoc"></category><category term="HTML5"></category></entry><entry><title>Hello Jekyll</title><link href="http://www.sciencetoweb.com/2012-02-20-hello-jekyll.html" rel="alternate"></link><updated>2012-02-20T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-02-20:2012-02-20-hello-jekyll.html</id><summary type="html">&lt;p&gt;After searching for months an easy to use blogging system for my everyday use, I finally found &lt;a href="http://jekyllbootstrap.com/" title="Jekyll boostrap project page"&gt;Jekyll&lt;/a&gt;, thanks to my &lt;a href="https://twitter.com/#!/julienmaupetit" title="Twitter Julien Maupetit"&gt;twitter&lt;/a&gt; feeds.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://mskstatic.com/386/515/medias/photos/programmes/moins_de150000/132996/dr-jekyll-and-mr-hyde.jpg" alt="Jekyll and Hide" /&gt;&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;p&gt;With Jekyll, create a new blog post or a new page for your blog is as easy as typing a single command line like &lt;code&gt;rake do something&lt;/code&gt;. You only need to focus on the content written in &lt;a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax"&gt;markdown&lt;/a&gt;. Main advantages of this tool are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You only need your favourite &lt;strong&gt;text editor&lt;/strong&gt; (&lt;a href="http://www.gnu.org/software/emacs/" title="GNU Emacs Project page"&gt;GNU Emacs&lt;/a&gt; of course!) and a terminal (with &lt;a href="http://git-scm.com/" title="git SCM"&gt;git&lt;/a&gt; installed) to publish new content on your blog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;No database&lt;/strong&gt; is requiered&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Github &lt;strong&gt;free hosting&lt;/strong&gt; (uses &lt;a href="http://pages.github.com/" title="GitHub Pages"&gt;GitHub Pages&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;GitHub Pages allows you to use &lt;strong&gt;your own domaine name&lt;/strong&gt; (define a CNAME) pointing to your repository (your blog in fact)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Optionally you can locally install jekyll to preview your content&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Overview of Jekyll&lt;/h2&gt;
+&lt;h3&gt;Create a blog post&lt;/h3&gt;
+&lt;p&gt;Once installed and configured (5 minutes with the &lt;a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html"&gt;Jekyll quick start&lt;/a&gt; guide), simply create a blog post with the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake post &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create a properly formated file &lt;code&gt;./_posts/2012-03-15-my-new-post.md&lt;/code&gt;. This is the one you must edit with your post content.&lt;/p&gt;
+&lt;h3&gt;Create pages&lt;/h3&gt;
+&lt;p&gt;You may also want to generate static pages for your blog. Let's say you want to create a static page with relevant informations about you, type:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake page &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;about.md&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will create your page template &lt;code&gt;about.md&lt;/code&gt; in your project root directory. This page will be automatically listerd in the &lt;code&gt;/pages.html&lt;/code&gt; view and available at &lt;code&gt;/about.html&lt;/code&gt;. The Jekyll documentation mention the possibility to create nested pages via the command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rake page &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pages/about.md&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Publish&lt;/h3&gt;
+&lt;p&gt;Once configured, publishing new content to your blog is a classical git workflow:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -am &lt;span class="s1"&gt;&amp;#39;New blog post added&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now wait for a few minutes, GitHub will send you a notification once our page has been build successfully.&lt;/p&gt;
+&lt;h3&gt;Syntax highlighting&lt;/h3&gt;
+&lt;p&gt;One of the major feature I liked is the opportunity to add syntax highlighting for code blocks: Jekyll uses &lt;a href="http://www.liquidmarkup.org"&gt;Liquid&lt;/a&gt; to process templates and adds &lt;a href="https://github.com/mojombo/jekyll/wiki/liquid-extensions" title="See Jekyll Liquid extensions"&gt;its own tags&lt;/a&gt; including &lt;code&gt;highlight&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;highlight&lt;/code&gt; liquid tag, the following block code:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;{% literal %}
+{% highlight python linenos %}
+print &amp;quot;Hello Jekyll!&amp;quot;
+{% endhighlight %}
+{% endliteral %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will be rendered as:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;{% highlight python linenos %}
+print &amp;quot;Hello Jekyll!&amp;quot;
+{% endhighlight %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Note to myself: to display the non-rendered block you should use the &lt;code&gt;literal&lt;/code&gt; tag for liquid 2.2.2 and the &lt;code&gt;raw&lt;/code&gt; tag for liquid 2.3.0, and both of them are not backward compatible... Hence, when &lt;code&gt;gh-pages&lt;/code&gt; will upgrade to liquid 2.3.0, this page will be broken and will need an update. Please, dear reader: do not hesitate to warn me! This has been reported in &lt;a href="https://github.com/mojombo/jekyll/issues/425"&gt;issue #425&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Configure your domain name&lt;/h3&gt;
+&lt;p&gt;As explained in &lt;a href="http://pages.github.com/#custom_domains" title="Read GitHub Pages Documentation"&gt;GitHub Pages documentation&lt;/a&gt;, GitHub offers you the possibility to use your own CNAME pointing to your repository/blog. Hence, at the root of your repository add a file named &lt;code&gt;CNAME&lt;/code&gt; which contains your subdomain name, &lt;em&gt;e.g.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;yageekblog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And of course, configure your DNS settings properly, &lt;em&gt;e.g.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;yageekblog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;CNAME&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt; &lt;span class="n"&gt;jmaupetit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Still some work to do...&lt;/h2&gt;
+&lt;p&gt;Now that I have found the technical solution I was looking for, I have to do some more work to migrate posts from my previous blog ( &lt;a href="http://www.maupetit.net/Blog/" title="Julien Maupetit Deprecated Blog"&gt;http://www.maupetit.net/Blog/&lt;/a&gt; ) and define my own template and not &lt;a href="http://themes.jekyllbootstrap.com/" title="Theme for Jekyll-bootstrap"&gt;the-minimum theme&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2012/04/05&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Latest remarks&lt;/h2&gt;
+&lt;h3&gt;Debugging your pages/posts&lt;/h3&gt;
+&lt;p&gt;In &lt;code&gt;page build failure&lt;/code&gt; case (when pushing to github), install gem versions used in production by github, &lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;liquid 2.2.2&lt;/code&gt; and &lt;code&gt;jekyll 0.11.0&lt;/code&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install liquid -v 2.2.2
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install jekyll -v 0.11.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To see building errors, inactivate the &lt;code&gt;auto&lt;/code&gt; mode, by editing your &lt;code&gt;_config.yml&lt;/code&gt; as:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Always run the jekyll server with the &lt;code&gt;--safe&lt;/code&gt; option&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;jekyll --server --safe
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="jekyll"></category><category term="me"></category><category term="YetAnotherCoolStuff"></category></entry></feed>
