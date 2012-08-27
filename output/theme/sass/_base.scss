@@ -1,22 +1,25 @@
 // Basic styling (default tags classes overriding)
+body { 
+    background-color:$color1;
+}
 
 blockquote { 
-    margin-top: 25px; 
-    margin-bottom: 25px; 
+    margin: 25px 0; 
     text-align: left; 
     text-indent: 16px; 
-    font-weight: 400; 
-    font-style: italic; 
-    color:$txtColor;
+    font-weight: 400;
+    p {
+        font-style: italic!important; 
+    }
 }
 
 h1, h2, h3, h4, h5, h6 { & > a { border:none }}
 
 a { 
     padding-bottom:-5px;
-    border-bottom: 1px dotted #990100;
+    border-bottom: 1px dotted $color4;
     &:hover {
-        border-bottom: 1px solid #990100;
+        border-bottom: 1px solid $color4;
     }
     &.radius:hover { 
         color:#e8e8e8!important; 
@@ -28,7 +31,6 @@ h1 {
     text-transform: capitalize; 
     font-weight: 400; 
     font-style: normal; 
-    font-size: 69px;
     line-height: 100px; 
 }
 
@@ -39,29 +41,31 @@ h2 {
     letter-spacing: 1px; 
     font-weight: 400; 
     font-style: normal; 
-    font-size: 30px; 
     font-family: 'Crimson Text'; 
-    line-height: 25px; 
 }
 
 h3 { 
-    margin-top: 35px 
+    margin-top: 35px;
 }
 
 code { 
     font-weight:normal;
-    font-size:0.9em;
     padding:3px;
 }
 
 aside p { font-style:normal }
 
-p, ul > li {
-    font-size:1.5em!important;
-}
-
 p { 
     margin-bottom: 10px;     
 }
 
-.vspacer { clear:both; padding:35px 0; }
+ul { 
+    list-style:none;
+    li {
+        padding-left:1em;
+        text-indent:-0.7em;
+        &:before {
+            content: "≻ ";
+        }
+    }
+}
