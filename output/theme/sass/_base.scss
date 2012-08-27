@@ -1,0 +1,67 @@
+// Basic styling (default tags classes overriding)
+
+blockquote { 
+    margin-top: 25px; 
+    margin-bottom: 25px; 
+    text-align: left; 
+    text-indent: 16px; 
+    font-weight: 400; 
+    font-style: italic; 
+    color:$txtColor;
+}
+
+h1, h2, h3, h4, h5, h6 { & > a { border:none }}
+
+a { 
+    padding-bottom:-5px;
+    border-bottom: 1px dotted #990100;
+    &:hover {
+        border-bottom: 1px solid #990100;
+    }
+    &.radius:hover { 
+        color:#e8e8e8!important; 
+    }
+}
+
+h1 { 
+    margin-bottom: 25px; 
+    text-transform: capitalize; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: 69px;
+    line-height: 100px; 
+}
+
+h2 { 
+    margin-top: 50px; 
+    margin-bottom: 25px; 
+    text-transform: capitalize; 
+    letter-spacing: 1px; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: 30px; 
+    font-family: 'Crimson Text'; 
+    line-height: 25px; 
+}
+
+h3 { 
+    margin-top: 35px 
+}
+
+code { 
+    font-weight:normal;
+    font-size:0.9em;
+    padding:3px;
+}
+
+aside p { font-style:normal }
+
+p, ul > li {
+    font-size:1.5em!important;
+}
+
+p { 
+    margin-bottom: 10px;     
+}
+
+.vspacer { clear:both; padding:35px 0; }
