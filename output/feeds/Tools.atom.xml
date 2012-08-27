@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/Tools.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-03-21T00:00:00+01:00</updated><entry><title>Write your own AsciiDoc theme for HTML5 backend with SASS</title><link href="http://www.sciencetoweb.com/write-your-own-asciidoc-theme-for-html5-backend-with-sass.html" rel="alternate"></link><updated>2012-03-21T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-03-21:write-your-own-asciidoc-theme-for-html5-backend-with-sass.html</id><summary type="html">&lt;p&gt;A few months ago, I was searching for a good markup language to write documents for my &lt;a href="http://www.comsource.fr"&gt;company&lt;/a&gt;. Desired features I was looking for were:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science to Web</title><link href="http://www.sciencetoweb.com/" rel="alternate"></link><link href="http://www.sciencetoweb.com/feeds/Tools.atom.xml" rel="self"></link><id>http://www.sciencetoweb.com/</id><updated>2012-03-21T00:00:00+01:00</updated><entry><title>Write your own AsciiDoc theme for HTML5 backend with SASS</title><link href="http://www.sciencetoweb.com/write-your-own-asciidoc-theme-for-html5-backend-with-sass.html" rel="alternate"></link><updated>2012-03-21T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-03-21:write-your-own-asciidoc-theme-for-html5-backend-with-sass.html</id><summary type="html">&lt;div class="intro"&gt;
+
+&lt;p&gt;A few months ago, I was searching for a good markup language to write documents for my &lt;a href="http://www.comsource.fr"&gt;company&lt;/a&gt;. Desired features I was looking for were:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;text based pivot markup language to ease collaborative work with a &lt;a href="http://en.wikipedia.org/wiki/Source_code_management" title="Source Code Management"&gt;version control system&lt;/a&gt;, such as &lt;a href="http://git-scm.com/"&gt;git&lt;/a&gt; or &lt;a href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;easy convertion to other file formats like HTML, PDF, etc.&lt;/li&gt;
 &lt;li&gt;rich enough to define my own stylesheet/classes for the HTML backend. This is a crucial point.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To my knowledge, &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc&lt;/a&gt; seems to answer to all of these requirements.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h2&gt;AsciiDoc&lt;/h2&gt;
 &lt;p&gt;As defined in the &lt;a href="http://www.methods.co.nz/asciidoc/"&gt;AsciiDoc home page&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -124,5 +128,4 @@ lorem_ipsum.adoc
 
 &lt;p&gt;And tadaaaah!&lt;/p&gt;
 &lt;h2&gt;Resources of the tutorial&lt;/h2&gt;
-&lt;p&gt;You will find all ressources of this tutorial on github: &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/jmaupetit/AsciiDoc_SASS"&gt;https://github.com/jmaupetit/AsciiDoc_SASS&lt;/a&gt;&lt;/p&gt;</summary><category term="SASS"></category><category term="CSS"></category><category term="AsciiDoc"></category><category term="HTML5"></category></entry></feed>
+&lt;p&gt;You will find all ressources of this tutorial on github: &lt;a href="https://github.com/jmaupetit/AsciiDoc_SASS"&gt;https://github.com/jmaupetit/AsciiDoc_SASS&lt;/a&gt;&lt;/p&gt;</summary><category term="SASS"></category><category term="CSS"></category><category term="AsciiDoc"></category><category term="HTML5"></category></entry></feed>

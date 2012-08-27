@@ -68,17 +68,17 @@ python manage.py loaddata data/colissimo_initial_data.json
 &lt;h2&gt;Roadmap&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Complete support of &lt;a href="http://www.colissimo.fr/so/"&gt;So Colissimo&lt;/a&gt; WS (multiple delivery modes, tracking number, shipping label, etc.)&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="satchmo"></category><category term="e-commerce"></category><category term="shipping"></category></entry><entry><title>Hello Jekyll</title><link href="http://www.sciencetoweb.com/2012-02-20-hello-jekyll.html" rel="alternate"></link><updated>2012-02-20T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-02-20:2012-02-20-hello-jekyll.html</id><summary type="html">&lt;p&gt;After searching for months an easy to use blogging system for my everyday use, I finally found &lt;a href="http://jekyllbootstrap.com/" title="Jekyll boostrap project page"&gt;Jekyll&lt;/a&gt;, thanks to my &lt;a href="https://twitter.com/#!/julienmaupetit" title="Twitter Julien Maupetit"&gt;twitter&lt;/a&gt; feeds.&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="satchmo"></category><category term="e-commerce"></category><category term="shipping"></category></entry><entry><title>Hello Jekyll</title><link href="http://www.sciencetoweb.com/2012-02-20-hello-jekyll.html" rel="alternate"></link><updated>2012-02-20T00:00:00+01:00</updated><author><name>Julien Maupetit</name></author><id>tag:www.sciencetoweb.com,2012-02-20:2012-02-20-hello-jekyll.html</id><summary type="html">&lt;div class="intro"&gt;
+
+&lt;p&gt;After searching for months an easy to use blogging system for my everyday use, I finally found &lt;a href="http://jekyllbootstrap.com/" title="Jekyll boostrap project page"&gt;Jekyll&lt;/a&gt;, thanks to my &lt;a href="https://twitter.com/#!/julienmaupetit" title="Twitter Julien Maupetit"&gt;twitter&lt;/a&gt; feeds.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;&lt;img src="http://mskstatic.com/386/515/medias/photos/programmes/moins_de150000/132996/dr-jekyll-and-mr-hyde.jpg" alt="Jekyll and Hide" /&gt;&lt;/p&gt;
 &lt;h2&gt;Features&lt;/h2&gt;
 &lt;p&gt;With Jekyll, create a new blog post or a new page for your blog is as easy as typing a single command line like &lt;code&gt;rake do something&lt;/code&gt;. You only need to focus on the content written in &lt;a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax"&gt;markdown&lt;/a&gt;. Main advantages of this tool are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;You only need your favourite &lt;strong&gt;text editor&lt;/strong&gt; (&lt;a href="http://www.gnu.org/software/emacs/" title="GNU Emacs Project page"&gt;GNU Emacs&lt;/a&gt; of course!) and a terminal (with &lt;a href="http://git-scm.com/" title="git SCM"&gt;git&lt;/a&gt; installed) to publish new content on your blog&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;No database&lt;/strong&gt; is requiered&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;You only need your favourite &lt;strong&gt;text editor&lt;/strong&gt; (&lt;a href="http://www.gnu.org/software/emacs/" title="GNU Emacs Project page"&gt;GNU Emacs&lt;/a&gt; of course!) and a terminal (with &lt;a href="http://git-scm.com/" title="git SCM"&gt;git&lt;/a&gt; installed) to publish new content on your blog&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No database&lt;/strong&gt; is requiered&lt;/li&gt;
 &lt;li&gt;Github &lt;strong&gt;free hosting&lt;/strong&gt; (uses &lt;a href="http://pages.github.com/" title="GitHub Pages"&gt;GitHub Pages&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;GitHub Pages allows you to use &lt;strong&gt;your own domaine name&lt;/strong&gt; (define a CNAME) pointing to your repository (your blog in fact)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Optionally you can locally install jekyll to preview your content&lt;/em&gt;&lt;/li&gt;
@@ -145,8 +145,7 @@ print &amp;quot;Hello Jekyll!&amp;quot;
 
 &lt;h2&gt;Still some work to do...&lt;/h2&gt;
 &lt;p&gt;Now that I have found the technical solution I was looking for, I have to do some more work to migrate posts from my previous blog ( &lt;a href="http://www.maupetit.net/Blog/" title="Julien Maupetit Deprecated Blog"&gt;http://www.maupetit.net/Blog/&lt;/a&gt; ) and define my own template and not &lt;a href="http://themes.jekyllbootstrap.com/" title="Theme for Jekyll-bootstrap"&gt;the-minimum theme&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE 2012/04/05&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Latest remarks&lt;/h2&gt;
+&lt;h2&gt;UPDATE - 2012/04/05&lt;/h2&gt;
 &lt;h3&gt;Debugging your pages/posts&lt;/h3&gt;
 &lt;p&gt;In &lt;code&gt;page build failure&lt;/code&gt; case (when pushing to github), install gem versions used in production by github, &lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;liquid 2.2.2&lt;/code&gt; and &lt;code&gt;jekyll 0.11.0&lt;/code&gt;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install liquid -v 2.2.2
