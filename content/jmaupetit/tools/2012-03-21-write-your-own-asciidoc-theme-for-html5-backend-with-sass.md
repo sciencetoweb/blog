@@ -2,7 +2,7 @@ Date: 2012-03-21
 Title: Write your own AsciiDoc theme for HTML5 backend with SASS
 category: Tools
 Slug: write-your-own-asciidoc-theme-for-html5-backend-with-sass
-tags: SASS, CSS, AsciiDoc, HTML5
+tags: sass, css, html
 
 <div class="intro" markdown="1">
 A few months ago, I was searching for a good markup language to write documents for my [company](http://www.comsource.fr). Desired features I was looking for were:

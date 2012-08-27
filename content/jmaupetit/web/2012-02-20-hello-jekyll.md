@@ -2,13 +2,11 @@ Date: 2012-02-20
 Title: Hello Jekyll
 Category: Web
 Slug: 2012-02-20-hello-jekyll
-Tags: jekyll, me, YetAnotherCoolStuff
+Tags: html, github, ruby
 
 <div class="intro" markdown="1">
 After searching for months an easy to use blogging system for my everyday use, I finally found [Jekyll](http://jekyllbootstrap.com/ "Jekyll boostrap project page"), thanks to my [twitter](https://twitter.com/#!/julienmaupetit "Twitter Julien Maupetit") feeds.
 </div>
-
-<img src="http://mskstatic.com/386/515/medias/photos/programmes/moins_de150000/132996/dr-jekyll-and-mr-hyde.jpg" alt="Jekyll and Hide" />
 
 ## Features
 
