@@ -1,1 +1,2 @@
-./output/theme/.sass-cache
+output/theme/.sass-cache/
+*.pid
