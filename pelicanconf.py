@@ -8,7 +8,7 @@ SITEURL = 'http://www.sciencetoweb.com'
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'en'
-THEME = "notmyidea"
+THEME = "newspaper"
 
 # Blogroll
 LINKS =  (('Julien Maupetit', 'http://www.maupetit.net'),
